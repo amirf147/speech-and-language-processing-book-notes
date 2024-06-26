@@ -44,6 +44,7 @@ In the context of **discrete probability distributions** (like coin flips):
    - the term comes from the **context**
  - Likelihoods are a probability of the **observed data** under a hypothetical scenario. many hypothetical different scenarios, there are many likelihoods and they can't add up to one and thus cannot be interpreted as probabilities
  - Likelihood = we know what we observed, and we consider the probability of **what we observed** in any possible universe. 
+ - Likelihoods of a single outcome under multiple probability distributions do not add up to one.
   
 In **normal distributions** (a type of continuous distribution):
  - probability = area under the curve
@@ -63,3 +64,4 @@ $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
 **Notes:**
 
 *  This formula describes the density function for any normal distribution, not just the standard normal distribution (where μ = 0 and σ = 1).
+
