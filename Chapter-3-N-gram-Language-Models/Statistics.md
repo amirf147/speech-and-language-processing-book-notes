@@ -30,7 +30,8 @@ In the context of **discrete probability distributions** (like coin flips):
  - Probability exists in **one universe**
  - A probability of an event is related to other events that occur in the same universe
  - The probabilities within the universe must all add up to 1
- - Of all those probabilities, one thing **must happen** (clarify?)
+ - Of all those probabilities, one thing **must happen**
+   - because a probability is the chance of something happening, specifically one thing
  - In probability, we know the _parameters_ which exactly describe the situation and how often things occur
  - Probability and likelihood are really the same thing, from different perspectives
  - Probability =  we know which universe we are in, and the probabilities of all events in that one universe add up to 1.
@@ -46,3 +47,19 @@ In the context of **discrete probability distributions** (like coin flips):
   
 In **normal distributions** (a type of continuous distribution):
  - probability = area under the curve
+ - the normal bell curve (with standard deviation 1) is described by the **density**:
+
+Certainly! Here's the formula for the probability density function (PDF) of a normal distribution in markdown format:
+
+> Formula, explanations, notes for the probability density function of a normal distribution provided by Google's Gemini AI
+$$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
+
+**Explanation of the symbols:**
+
+* `f(x)`: Represents the density function at a specific value `x`.
+* `μ`: Represents the mean of the normal distribution.
+* `σ`: Represents the standard deviation of the normal distribution.
+
+**Notes:**
+
+*  This formula describes the density function for any normal distribution, not just the standard normal distribution (where μ = 0 and σ = 1).
