@@ -1,5 +1,26 @@
 ## Clarification of certain statistics terms and concepts
 
+### Random Variables (Source: Gemini, https://youtu.be/3v9w79NhsfI)
+- uncertain numerical outcome of an experiment or random process
+- the quantification of outcomes in random processes
+
+* **Continuous:** Can take on any value within a specific range (like height). Probability focuses on ranges (e.g., probability of being between 1.7m and 1.8m tall).
+* **Discrete:** Can only take on specific, separate values (like number of dots on a die). Probability focuses on individual values (e.g., probability of rolling a 3).
+   - mean (expected value): multiply the probabilities of the occurrences of each separate value occurring with their corresponding separate values and then add them together.
+
+      - gives you an idea around which value outcomes will cluster, ex: dice rolls cluster around 3.5
+      $$E = \sum_{i} (x_i \cdot p_i)$$
+
+      **Explanation of the formula:** (Source: Gemini)
+
+      * **$E$**: Represents the expected value (mean).
+      * **$\sum_{i}$ (capital sigma summation):** Represents the sum over all possible values (i) of the variable.
+      * **$x_i$**: Represents the i-th possible value of the variable. 
+      * **$p_i$**: Represents the probability of pthe i-th value of the variable (p_i must be between 0 and 1, and the sum of all probabilities for all possipble values must equal 1).
+     
+
+
+
 ### Discrete probability distributions
 >The information for this section is sourced from Google's Gemini AI
 
@@ -50,8 +71,6 @@ In **normal distributions** (a type of continuous distribution):
  - probability = area under the curve
  - the normal bell curve (with standard deviation 1) is described by the **density**:
 
-Certainly! Here's the formula for the probability density function (PDF) of a normal distribution in markdown format:
-
 > Formula, explanations, notes for the probability density function of a normal distribution provided by Google's Gemini AI
 $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
 
@@ -65,3 +84,6 @@ $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
 
 *  This formula describes the density function for any normal distribution, not just the standard normal distribution (where μ = 0 and σ = 1).
 
+What is a **continuous distribution**?:
+> Source: Gemini, Khan Academy (https://www.youtube.com/watch?v=dOr0NKyD31Q)
+- Probability distribution for a random variable
