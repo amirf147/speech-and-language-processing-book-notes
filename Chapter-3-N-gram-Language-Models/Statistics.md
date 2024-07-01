@@ -1,12 +1,14 @@
-## Clarification of certain statistics terms and concepts
+> Clarification of certain statistics terms and concepts
 
-### Random Variables (Source: Gemini, https://youtu.be/3v9w79NhsfI)
+> **Resource that i have not yet checked out but looks good:**
+> - Probability (Math): https://stats.libretexts.org/Courses/Saint_Mary's_College_Notre_Dame/MATH_345__-_Probability_(Kuter)
+
+# Random Variables (Source: Gemini, https://youtu.be/3v9w79NhsfI, khan academy, https://www.youtube.com/watch?v=dOr0NKyD31Q)
 - uncertain numerical outcome of an experiment or random process
 - the quantification of outcomes in random processes
-
-* **Continuous:** Can take on any value within a specific range (like height). Probability focuses on ranges (e.g., probability of being between 1.7m and 1.8m tall).
-* **Discrete:** Can only take on specific, separate values (like number of dots on a die). Probability focuses on individual values (e.g., probability of rolling a 3).
-   - mean (expected value): multiply the probabilities of the occurrences of each separate value occurring with their corresponding separate values and then add them together.
+## **Discrete Random Variables:** 
+Can only take on specific, separate values (like number of dots on a die). Probability focuses on individual values (e.g., probability of rolling a 3). could also be from an infinite set of possibilities but it would have to be **countable**
+  - **mean (expected value)**: multiply the probabilities of the occurrences of each separate value occurring with their corresponding separate values and then add them together.
 
       - gives you an idea around which value outcomes will cluster, ex: dice rolls cluster around 3.5
       $$E = \sum_{i} (x_i \cdot p_i)$$
@@ -17,9 +19,32 @@
       * **$\sum_{i}$ (capital sigma summation):** Represents the sum over all possible values (i) of the variable.
       * **$x_i$**: Represents the i-th possible value of the variable. 
       * **$p_i$**: Represents the probability of pthe i-th value of the variable (p_i must be between 0 and 1, and the sum of all probabilities for all possipble values must equal 1).
-     
+
+## **Continuous Random Variables:** 
+Can take on any value within a specific range (like height). Probability focuses on ranges (e.g., probability of being between 1.7m and 1.8m tall). any value in an interval even an infinite one. not countable, for example like the exact mass of a random animal, it is **uncountable** because the decimal places could keep going on forever. another example is the exact winning time of a race. 
+  - can take on any value within a range
+  - **mean (expected value)**: need to use the probability density function **pdf** and integration
+      
+      (Formula source: gemini)
+      
+      $$E = \int_{a}^{b} x \cdot f(x) \, dx$$
+
+      **Explanation of the formula:**
+
+      * **$E$**: Represents the expected value (mean).
+      * **$\int_{a}^{b}$**: Represents the definite integral over a specific range from lower bound `a` to upper bound `b`. This range defines the possible values for the continuous random variable. 
+          * In some cases, the range might be from negative infinity to positive infinity (represented by $-\infty$ and $\infty$ symbols), depending on the distribution.
+      * **$x$**: Represents the value of the variable.
+      * **$f(x)$**: Represents the probability density function (pdf) of the variable. The pdf defines the relative likelihood of different values for the variable.
+      * **$dx$**: Represents the infinitesimal change in the variable during integration.
+
+      **Key points to remember:**
+
+      * This formula assumes the integral converges (meaning it has a finite value). Not all probability density functions have finite integrals. 
+      * The specific range of integration (a to b) depends on the particular continuous distribution and its possible values.
 
 
+## Probability Distributions
 
 ### Discrete probability distributions
 >The information for this section is sourced from Google's Gemini AI
