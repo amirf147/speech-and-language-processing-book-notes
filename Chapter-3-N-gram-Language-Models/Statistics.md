@@ -97,6 +97,7 @@ In **normal distributions** (a type of continuous distribution):
  - the normal bell curve (with standard deviation 1) is described by the **density**:
 
 > Formula, explanations, notes for the probability density function of a normal distribution provided by Google's Gemini AI
+
 $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
 
 **Explanation of the symbols:**
