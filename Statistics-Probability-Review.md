@@ -94,6 +94,9 @@ In the context of **discrete probability distributions** (like coin flips):
   
 In **normal distributions** (a type of continuous distribution):
  - probability = area under the curve
+ - bell curve
+ - each point on a normal distribution is a **probability density** but the probability of any point occurring is zero since there are infinite points
+ - the probability density at any single point just indicates the **relative likelihood** of encountering a value in a small range around that point
  - the normal bell curve (with standard deviation 1) is described by the **density**:
 
 > Formula, explanations, notes for the probability density function of a normal distribution provided by Google's Gemini AI
@@ -110,6 +113,40 @@ $$ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{ -\frac{(x - \mu)^2}{2\sigma^2}} $$
 
 *  This formula describes the density function for any normal distribution, not just the standard normal distribution (where μ = 0 and σ = 1).
 
-What is a **continuous distribution**?:
-> Source: Gemini, Khan Academy (https://www.youtube.com/watch?v=dOr0NKyD31Q)
-- Probability distribution for a random variable
+example:
+suppose we observe x = 1
+probability x = 1 is 0
+density at x = 1 depends on which universe we are in, i.e. which normal distribution we have
+for continuous distribution, the relevant question is not "what is a likelihood vs a probability", rather it is a **density vs likelihood**
+
+>it is a probability density function if we view it as a function of x where  `μ` is known
+>
+>it is a likelihood function if we viewed as a function of the unknown parameter `μ`, where x is known
+
+## breakdown from gemini ai to clarify:
+
+**Probability vs. Likelihood:**
+
+* **Probability:** Refers to the chance of a specific event happening within a given sample space. In the context of a continuous distribution with a known parameter (like μ, the mean), the pdf defines the probability density of different values (x) the variable can take on.
+* **Likelihood:** Refers to the probability of observing a particular set of data (already observed) given a specific model or hypothesis. In this case, the likelihood function describes how well different possible values of the unknown parameter (like μ) explain the observed data (known x values).
+
+**Key Differences:**
+
+| Feature        | Probability (pdf) | Likelihood |
+|----------------|-------------------|------------|
+| Focus           | Probability density of different values (x) | How well a parameter (μ) explains observed data (x) |
+| Parameter       | Known (e.g., μ) | Unknown (e.g., μ) |
+| Data            | Not required (conceptual) | Observed (known x values) |
+
+**Understanding the Viewpoints:**
+
+* **PDF as a Function of x (known μ):** When you view the pdf as a function of x with a known parameter (μ), you're essentially focusing on the probability density for different possible values of the variable (x) given that specific value of μ. This helps understand the overall shape and behavior of the distribution for a fixed parameter.
+* **Likelihood Function (unknown μ):** When you consider the likelihood function, the focus shifts to explaining observed data (known x values). You have different possible values for the unknown parameter (μ) and calculate the likelihood (how well each μ explains the observed data). Techniques like maximum likelihood estimation aim to find the μ value that maximizes this likelihood.
+
+**Observation and the PDF:**
+
+While it might seem like no observation has occurred when considering the pdf as a function of x, it's not entirely accurate. The pdf itself is based on the underlying theoretical distribution and its parameters (like μ). It represents the probability density for any possible value (x) **if** the distribution holds true. We don't necessarily need a specific observation (known x value) to define the pdf, but it's based on the characteristics of the distribution itself.
+
+**Think of it this way:** Imagine a coin toss. The probability of heads (p) is a fixed parameter. You can define the probability density for heads and tails (0.5 each) without actually flipping a coin. However, if you already flipped the coin and observed heads, the likelihood function would focus on how well different possible values of p (between 0 and 1) explain the observed outcome of heads.
+
+**In essence, the distinction between probability and likelihood hinges on whether you're interested in the general probability density for different values within a known distribution (pdf) or the relative fit of different parameters to explain observed data (likelihood function).**
